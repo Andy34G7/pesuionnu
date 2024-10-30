@@ -1,0 +1,13 @@
+conv1 - kernel 5,5 =>
+conv2 - kernel 5,5  =>
+maxpool1 - 2,2 =>
+maxpool2 - 2,2 =>
+fc1 - in features, out features - 800,500 =>
+fc2 - in features - 500 =>
+lr, batch, epoch - 0.001, 64, 15 =>
+Adam weight_decay - 0.002 =>
+Accuracy: 91.04 =>
+
+The above are the parameters I have chosen to play around with. Some reduce the loss and some have high loss. But the Accuracy seems to taper off at ~91%
+This is with a batch size of 64, and 15 epochs. In comparision, a conventional NN (present in Assignment 1) managed to hit 88% after going through entire data with 10000 epochs.
+As such, a CNN is better equipped to train on data, requiring less data and less computational resources. Yes, in terms of a single epoch, a CNN uses a lot more resources, but it trains a lot better too.
